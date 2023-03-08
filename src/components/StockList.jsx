@@ -20,18 +20,18 @@ export const StockList = () => {
             }
           })
         }))
-        console.log(responses);
+        //console.log(responses);
         const data = responses.map((response) => {
           return {
             data: response.data,
             symbol: response.config.params.symbol
           }
         })
-        console.log(data);
+        //console.log(data);
         if (mounted) {
           setStock(data);
         }
-        console.log(stock);
+        //console.log(stock);
 
       } catch (err) {
         console.log(err);

@@ -2,6 +2,7 @@ import { useEffect, useState} from 'react';
 import { useParams } from 'react-router-dom';
 import finnHub from '../apis/finnHub';
 import { StockChart } from '../components/StockChart';
+import { StockData } from '../components/StockData';
 
 const formatData = (data) => {
   return data.t.map((el, index )=> {
@@ -57,7 +58,7 @@ export const StockDetailPage = () => {
             }
           })
         ])
-        console.log('responses: ', responses );
+        //console.log('responses: ', responses );
         setCharData({
           day: formatData(responses[0].data),
           week: formatData(responses[1].data),
@@ -77,6 +78,7 @@ export const StockDetailPage = () => {
       { charData && (
         <div>
           <StockChart charData={charData} symbol={symbol}/>
+          <StockData symbol={symbol}/>
         </div>
       )}
     </div>

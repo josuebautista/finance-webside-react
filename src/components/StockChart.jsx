@@ -7,7 +7,7 @@ export const StockChart = ({ charData, symbol }) => {
   const determineTimeFormat = () => {
     switch (dateFormat) {
       case '24h':
-        console.log(day);
+        //console.log(day);
         return day
       case '7d':
         return week

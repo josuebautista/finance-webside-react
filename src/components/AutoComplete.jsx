@@ -19,7 +19,7 @@ export const AutoComplete = () => {
         }}>
         {
           results.map((result) => {
-            console.log(result.symbol)
+            //console.log(result.symbol)
             return (
               <li onClick={() => {
                 addStock(result.symbol)
@@ -46,10 +46,10 @@ export const AutoComplete = () => {
             q: search
           }
         })
-        console.log('response: ', response);
-        console.log(mounted)
+        //console.log('response: ', response);
+        //console.log(mounted)
         if (mounted) {
-          console.log('saving...');
+          //console.log('saving...');
           setResults(response.data.result)
         }
       } catch (err) {
