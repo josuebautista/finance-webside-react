@@ -1,0 +1,6 @@
+react-router-dom
+bootstrap
+axios
+react-icons
+apexcharts
+react-apexcharts
